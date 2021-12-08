@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+    <title> MathShow | campeonato ninja </title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="./logotipo/logo-nova.jpg">
+</head>
+<body>
+
+    <section id="header">
+        <header>
+            <h1 class="float-l">
+              <a href="./index.html" style="color: antiquewhite;" title="Titulo do Site"> MathShow </a>
+            </h1>
+        </header>
+    </section>
+
+    <section id="home">
+
+        <img src="./logotipo/fundo.jpg" width="100%" height="600px" alt="MathShow"> <!-- MUDE AQUI A FOTO PRIMÁRIA DO SITE --> 
+
+    </section>
+
+    <section id="tela">
+
+        <h1> Seja bem-vindo, aluno! Esse será seu local de prova!! </h1> 
+
+        <script>
+            function mostrar(){
+                document.getElementById('relogio').style.display = 'block';
+            }
+        </script>
+
+        <script language="JavaScript">
+            var sHors = "00"; //quantas horas tem a prova?
+            var sMins = "05"; //quantos minutos tem a prova?
+            var sSecs = 60;   //não mude esse aqui!
+            function getSecs(){
+                sSecs--;
+                if(sSecs<0)
+                {sSecs=59;sMins--;if(sMins<=9)sMins="0"+sMins;}
+                if(sMins=="0-1")
+                {sMins=5;sHors--;if(sHors<=9)sHors="0"+sHors;}
+                if(sSecs<=9)sSecs="0"+sSecs;
+                if(sHors=="0-1")
+                {sHors="00";sMins="00";sSecs="00";
+                clock1.innerHTML=sHors+"<font color=#000000>:</font>"+sMins+"<font color=#000000>:</font>"+sSecs;}
+                else
+                {
+               clock1.innerHTML=sHors+"<font color=#000000>:</font>"+sMins+"<font color=#000000>:</font>"+sSecs;
+                   setTimeout('getSecs()',1000);
+                }
+                }
+            </script>
+            <input onclick="mostrar('relogio')" type="submit" value="Assim que desejar, clique para começar a prova">
+<div id="relogio" onclick="mostrar('relogio')">
+<h2 align="center"><font color="#065ca5" face="tahoma"> <!--mude aqui a cor do texto do título do cronometro-->  Contagem Regressiva</font></h2>
+<hr color="#065ca5" width="100"> <!--mude aqui a cor da reta que divide o título do cronometro e os números do cronometro--> 
+	<div align="center"> 
+	<b><font color=#ffffff > <!--mude aqui a cor do texto dos números do cronometro--> <font size=2 face=arial><span id="clock1"></span><script>setTimeout('getSecs()',1000);</script></font></b><br>
+	</div>
+</div>
+
+        <h3> <button disabled="disabled"> Nome do aluno: (dado pela coordenação) </button> <button disabled="disabled"> Nota do aluno: (dado pela coordenação) </button> </h3>
+
+<!--        <form action="">
+        
+            <h6> <strong> (QUESTÃO 1) </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis doloribus tempore nulla aperiam quaerat quisquam, repellendus est! Fugiat enim iusto qui porro expedita. Nemo, magnam neque ut ipsum ex unde. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro delectus libero ipsa repellat laborum beatae, dolore, recusandae ab placeat accusantium non dolorum illo. Ducimus aliquam accusantium natus est ipsa atque? </h6>
+            <label for="resposta">coloque sua resposta</label><input type="text" name="resposta" id="resposta">
+
+            <h6> <strong> (QUESTÃO 2) </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate animi reiciendis veniam deleniti iusto ex quaerat quas inventore recusandae, eius commodi cumque ad, praesentium aliquid, nulla quis dignissimos distinctio architecto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita alias cum deserunt, quis beatae harum sit nam libero voluptas officia hic reiciendis ut consectetur, ex, enim temporibus incidunt similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minima molestiae error excepturi necessitatibus asperiores, et nihil quam ducimus magni est cumque exercitationem accusantium velit. Dolor voluptate inventore nihil accusantium? </h6>
+
+            <select name="questao2" id="questao2">
+                <option value="letra a)"> letra a) </option>
+                <option value="letra b)"> letra b) </option>
+                <option value="letra c)"> letra c) </option>
+                <option value="letra d)"> letra d) </option>
+                <option value="letra e)"> letra e) </option>
+            </select>
+                
+            <h6> <strong> (QUESTÃO 2) </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae alias, molestiae perspiciatis, eaque laudantium deleniti ab aut ratione, cum suscipit recusandae inventore. Deserunt unde temporibus illo explicabo molestiae laudantium culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque expedita magnam suscipit est, rem harum exercitationem odit, aliquid reprehenderit corrupti voluptatibus nihil provident recusandae corporis eum illo tempore facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolores animi id aspernatur odio, rem nobis quod facere reprehenderit cumque. Expedita qui beatae debitis sint laborum, facilis cum obcaecati veniam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorem ad sequi alias porro libero eligendi sunt, natus ab. Ducimus est reprehenderit impedit? Explicabo quae quis sequi consequatur assumenda adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint illo dolor nisi perferendis. Ab, harum vero excepturi sit vel corrupti ut magni exercitationem quis doloremque ratione quia sapiente dolore beatae? </h6>
+
+            <label for="resposta">coloque sua resposta</label><input type="text" name="resposta" id="resposta">
+        </form> -->
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctD_PtVM6Jbn7VCjM2TTFxCDONEdDL4FI-1dUwNssDgMulLQ/viewform?embedded=true" class="formulario-prova" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+
+    </section>
+
+    <section id="footer">
+    <div>
+        <div>
+            <div>
+                <div>
+                    <p style="color: black;" > Todos direitos reservados  ©  MathShow </p>
+                </div>
+            </div> <!-- enf of row -->
+        </div>
+    </div>
+    </section>
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
